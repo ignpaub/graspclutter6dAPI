@@ -6,7 +6,7 @@
 
 ## Overview
 
-GraspClutter6D API is a comprehensive toolkit for working with the [GraspClutter6D Dataset](https://sites.google.com/view/graspclutter6d). 
+This repository contains dataset toolkit for the paper "**GraspClutter6D: A Large-scale Real-world Dataset for Robust Perception and Grasping in Cluttered Scenes**." (RA-L 2025) [[ArXiv]](https://arxiv.org/abs/2504.06866) [[Website]](https://sites.google.com/view/graspclutter6d) [[Dataset]](https://huggingface.co/datasets/GraspClutter6D/GraspClutter6D)
 
 - Load and manipulate 6D grasp pose annotations
 - Perform grasp evaluation for benchmarking
@@ -14,7 +14,7 @@ GraspClutter6D API is a comprehensive toolkit for working with the [GraspClutter
 
 ## Dataset
 
-The GraspClutter6D Dataset is available through [Hugging Face:](https://huggingface.co/datasets/GraspClutter6D/graspclutter6d)
+The GraspClutter6D Dataset is available through [Hugging Face](https://huggingface.co/datasets/GraspClutter6D/graspclutter6d)
 
 ## Installation
 
@@ -32,7 +32,7 @@ conda create -n gc6d python=3.8
 conda activate gc6d
 
 # Clone repository and install in development mode
-git clone https://github.com/username/graspclutter6dAPI.git
+git clone https://github.com/SeungBack/graspclutter6dAPI.git
 cd graspclutter6dAPI
 pip install -e .
 ```
@@ -74,3 +74,4 @@ python examples/exam_vis.py
 ## Acknowledgments
 
 This repository is built upon the [graspnetAPI](https://github.com/graspnet/graspnetAPI). We thank the authors for sharing their code.
+
