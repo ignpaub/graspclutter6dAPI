@@ -20,13 +20,7 @@ The GraspClutter6D Dataset is available through [Hugging Face](https://huggingfa
 
 ## Installation
 
-### Option 1: Install via pip
-
-```bash
-pip install graspclutter6dAPI
-```
-
-### Option 2: Install from source
+### Option 1: Install from source (Recommended for latest version)
 
 ```bash
 # Create and activate conda environment
@@ -37,6 +31,12 @@ conda activate gc6d
 git clone https://github.com/SeungBack/graspclutter6dAPI.git
 cd graspclutter6dAPI
 pip install -e .
+```
+
+### Option 2: Install via pip
+
+```bash
+pip install graspclutter6dAPI
 ```
 
 ## Environment Setup
