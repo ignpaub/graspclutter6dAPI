@@ -6,6 +6,8 @@
 
 ## Overview
 
+Nice dataset. Designed the apptainer file to test it, but scenes are too cluttered for prospective application.
+
 This repository contains dataset toolkit for the paper "**GraspClutter6D: A Large-scale Real-world Dataset for Robust Perception and Grasping in Cluttered Scenes**." (RA-L 2025) 
 
 [[ArXiv]](https://arxiv.org/abs/2504.06866) [[Website]](https://sites.google.com/view/graspclutter6d) [[Dataset]](https://huggingface.co/datasets/GraspClutter6D/GraspClutter6D) [[Video]](https://youtu.be/NkKkfVS5wZ4)
@@ -39,6 +41,18 @@ pip install -e .
 pip install graspclutter6dAPI
 ```
 
+
+### Option 3 (added): Install using apptainer
+
+```bash
+apptainer build --sandbox --fakeroot _0GraspClutter6D _0GraspClutter6D.def
+```
+Choose one of the following commands (no GPU or GPU support)
+```bash
+1) apptainer shell -H /home/ignacio/ --pwd / -w --fakeroot _0GraspClutter6D
+2) apptainer shell -H /home/ignacio/ --pwd / --nv _0GraspClutter6D
+```
+
 ## Environment Setup
 
 Before running the examples, set the environment variable to point to your dataset location:
@@ -54,7 +68,7 @@ export GC6D_ROOT='/path/to/graspclutter6d'
 Check if the downloaded dataset is complete and properly structured:
 
 ```bash
-python examples/exam_check_data.py
+python3 examples/exam_check_data.py
 ```
 
 ### Load Grasp Annotations
@@ -62,15 +76,16 @@ python examples/exam_check_data.py
 Load and process grasp annotations from the GraspClutter6D dataset:
 
 ```bash
-python examples/exam_loadGrasp.py
+python3 examples/exam_loadGrasp.py
 ```
 
 ### Visualize Grasp Annotations
 
+Edit exam_vis.py to change the saveFolder to a different path outside the container.  
 Generate visualizations of grasp poses and objects:
 
 ```bash
-python examples/exam_vis.py
+python3 examples/exam_vis.py
 ```
 
 ## Acknowledgments
