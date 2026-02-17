@@ -1,0 +1,29 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%files
+  exam_vis.py /
+  graspclutter6d.py /
+  
+%post
+  # Install python 3.8 and pip
+  apt-get update && apt install -y software-properties-common && add-apt-repository ppa:deadsnakes/ppa && apt-get update && apt install -y python3.8 && update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+  apt-get install -y python3.8-distutils
+  apt install -y python3-pip python3.8-dev
+  
+  # Clone repository and install in development mode
+  apt-get install -y git libgl1
+  git clone https://github.com/SeungBack/graspclutter6dAPI.git  
+  pip install -U setuptools
+  cd /graspclutter6dAPI && pip install -e .
+  
+  cp /exam_vis.py /graspclutter6dAPI/examples/exam_vis.py && rm /exam_vis.py
+  cp /graspclutter6d.py /graspclutter6dAPI/graspclutter6dAPI/graspclutter6d.py && rm /graspclutter6d.py
+  
+%environment
+  export GC6D_ROOT='/home/ignacio/datasets/grasp_datasets/GraspClutter6D'
+  export PYTHONPATH=$PYTHONPATH:/graspclutter6dAPI
+   
+%labels
+  Author Ignacio Páez Ubieta - CogRob group - Tampere University (Finland)
+  Version v0.0.1
