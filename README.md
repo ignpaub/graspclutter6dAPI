@@ -6,7 +6,9 @@
 
 ## Overview
 
+--------------------------------------------------------------------------------------------------
 Nice dataset. Designed the apptainer file to test it, but scenes are too cluttered for prospective application.
+--------------------------------------------------------------------------------------------------
 
 This repository contains dataset toolkit for the paper "**GraspClutter6D: A Large-scale Real-world Dataset for Robust Perception and Grasping in Cluttered Scenes**." (RA-L 2025) 
 
@@ -41,7 +43,7 @@ pip install -e .
 pip install graspclutter6dAPI
 ```
 
-
+--------------------------------------------------------------------------------------------------
 ### Option 3 (added): Install using apptainer
 
 ```bash
@@ -52,6 +54,8 @@ Choose one of the following commands (no GPU or GPU support)
 1) apptainer shell -H /home/ignacio/ --pwd / -w --fakeroot _0GraspClutter6D
 2) apptainer shell -H /home/ignacio/ --pwd / --nv _0GraspClutter6D
 ```
+--------------------------------------------------------------------------------------------------
+
 
 ## Environment Setup
 
@@ -80,8 +84,9 @@ python3 examples/exam_loadGrasp.py
 ```
 
 ### Visualize Grasp Annotations
-
+--------------------------------------------------------------------------------------------------
 Edit exam_vis.py to change the saveFolder to a different path outside the container.  
+--------------------------------------------------------------------------------------------------
 Generate visualizations of grasp poses and objects:
 
 ```bash
